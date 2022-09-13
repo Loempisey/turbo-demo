@@ -15,7 +15,7 @@
       "jsx": "react-jsx",
       "incremental": true
     },
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx",  "../**/*.stories.ts","../**/*.stories.tsx"],
     "exclude": ["node_modules"]
   }
   
