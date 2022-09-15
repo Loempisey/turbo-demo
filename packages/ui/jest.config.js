@@ -1,5 +1,6 @@
-
+const { TextDecoder, TextEncoder } = require('util')
 module.exports = {
+    
     collectCoverageFrom: [
       '**/*.{ts,tsx}',
       '!**/node_modules/**',
@@ -16,7 +17,11 @@ module.exports = {
         statements: 100,
       },
     },
-    setupFiles: ['<rootDir>/enzyme.js'],
+    globals: {
+      TextDecoder: TextDecoder,
+      TextEncoder: TextEncoder,
+    },
+    setupFiles: ['<rootDir>/jest.setup.js'],
     preset: 'ts-jest',
     testPathIgnorePatterns: ['/.next/', '/node_modules/', '/lib/', '/tests/', '/coverage/', '/.storybook/'],
     testRegex: '(/__test__/.*|\\.(test|spec))\\.(ts|tsx|js)$',
@@ -29,7 +34,8 @@ module.exports = {
         '<rootDir>/__mocks__/fileMock.js',
     },
     transform: {
-      '.(ts|tsx)': 'babel-jest',
+      '.(ts|tsx)': 'babel-jest', '^.+\\.ts?$': 'ts-jest',
     },
     transformIgnorePatterns: ['<rootDir>/node_modules/'],
+    // snapshotSerializers: ["enzyme-to-json/serializer"],
   };
