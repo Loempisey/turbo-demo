@@ -15,6 +15,7 @@ module.exports = {
     'storybook-css-modules-preset',
     'storybook-addon-next-router',
     // "@storybook/preset-typescript",
+
     // Add PostCSS into addons for compiling tailwind below
     {
         name: '@storybook/addon-postcss',
@@ -25,6 +26,7 @@ module.exports = {
         },
       },
   ],
+
   //End PostCSS
   framework: "@storybook/react",
   core: {

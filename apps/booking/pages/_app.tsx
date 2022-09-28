@@ -1,12 +1,13 @@
 import React from "react";
-import type {AppProps} from 'next/app'
+import type {AppProps} from 'next/app';
+import {RecoilRoot} from 'recoil';
 import 'tailwindcss/tailwind.css'
 
 function MyApp ({Component, pageProps}: AppProps){
     return (
-        <div>
-            <Component {...pageProps}/>
-        </div>
+            <RecoilRoot>
+                <Component {...pageProps}/>
+            </RecoilRoot>
     )
 }
 

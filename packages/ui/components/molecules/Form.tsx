@@ -36,7 +36,7 @@ export const FormInput = () =>{
                 hover:text-white
                 py-2 px-4 border 
                 border-blue-500 
-                hover:border-transparent rounded " >Submit</button>
+                hover:border-transparent rounded">Submit</button>
             </form>
         </div>
     )

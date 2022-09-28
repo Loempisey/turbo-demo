@@ -7,19 +7,22 @@ type ButtonProps = {
 
 export const Button = (props: ButtonProps)=>{
   return (
+    <div>
     <button
       type="button"
       className="bg-transparent
-       hover:bg-blue-500 
-       text-blue-700 
+       bg-indigo-500
+       text-white 
        font-semibold 
        hover:text-white
-       py-2 px-4 border 
-       border-blue-500 
-       hover:border-transparent rounded "
+       py-2 px-4
+       font-medium
+       hover:border-transparent rounded 
+       "
     >
       {props.label}
     </button>
+    </div>
   );
 }
 
