@@ -1,9 +1,9 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
 
 export const FormInput = () =>{
-    const [email, setEmail] = useState<string>('');
-    const [password, setPassword] = useState<string>('');
-
+    const [email, setEmail] = React.useState<string>('');
+    const [password, setPassword] = React.useState<string>('');
+   
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         console.log('form is submitted')

@@ -1,5 +1,5 @@
 import { Button, FormInput} from "ui";
-import Login from './login'
+import { Login } from "ui";
 
 export default function MyPage () {
   return (

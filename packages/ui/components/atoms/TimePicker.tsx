@@ -1,18 +1,17 @@
 import React, {useState} from "react";
-import DatePicker from 'react-datepicker'
+import DatePicker from 'react-multi-date-picker'
+import TimePicker from "react-multi-date-picker/plugins/time_picker";
 
 export const SelectTime = ()=>{
-    const [dateTime, setDateTime] = React.useState<Date>(new Date())
     return(
-        <div>
-            <DatePicker selected={dateTime}
-            onChange={(date)=> setDateTime(date)}
-            showTimeSelect
-            timeFormat="HH:mm"
-            timeIntervals={15}
-            timeCaption="Select a time"
-            dateFormat="h:mm aa"
-           />
+        <div >
+            <DatePicker 
+                disableDayPicker
+                placeholder="Select a time"
+                format="hh:mm A"
+                plugins={[
+                    <TimePicker hideSeconds/>
+                ]}/>
         </div>
     )
 }
