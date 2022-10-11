@@ -1,9 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
-import {Button} from './../atoms/Button'
+import {Button} from '../atoms/Button'
 // import {FiPlus} from 'react-icons/fi'
 
-export const Nav = ()=>{
+export const Meeting = ()=>{
     return(
         <div>
             <nav className='bg-gray-800'>

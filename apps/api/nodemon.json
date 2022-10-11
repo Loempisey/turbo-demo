@@ -1,9 +1,11 @@
 {
     "env": {
-        "MONGO_USER": "",
-        "MONGO_PASSWORD": "",
-        "MONGO_DB": "",
-        "JWT_SECRET_KEY": ""
+        "MONGO_USER": "pisey",
+        "MONGO_PASSWORD": "8L43lWAZcfCYt0rY",
+        "MONGO_DB": "Booking",
+        "JWT_SECRET_KEY": "Meeting",
+        "PORT": 9000,
+        "MONGO_URL": "mongodb+srv://pisey:<password>@cluster0.pmwhfft.mongodb.net/?retryWrites=true&w=majority"
     }
 }
 

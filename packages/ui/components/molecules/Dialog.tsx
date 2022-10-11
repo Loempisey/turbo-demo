@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {useForm, Controller} from 'react-hook-form';
 import Select from 'react-select';
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from 'yup';
 import { TextField } from "../atoms/Input";
 
-interface TextField {
+type TextField = {
     topic: string;
     date: string;
     time_from: string;
@@ -29,7 +29,7 @@ const schema = yup.object().shape({
 export const PopupForm=()=> {
     const [open, setOpen] = React.useState<boolean>(false);
     const [topic, setTopic] = React.useState<string>('');
-    
+
     const {register, handleSubmit, control} = useForm<TextField>({
         resolver: yupResolver(schema),
     });
@@ -82,6 +82,7 @@ export const PopupForm=()=> {
                                             <input type="text" {...register("topic")} 
                                             className="border p-2 rounded-lg mt-4 focus:border-indigo-500" 
                                             onChange={handleTopicChange} 
+                                            placeholder="description"
                                             value={topic} ></input>
                                             <h3 className="mt-2 text-[15px] font-medium leading-relaxed text-gray-800">Date</h3>
                                             <input type="date" {...register("date")} placeholder="Select a date" className="border p-2 rounded-lg mt-4 focus:border-indigo-500"></input>
@@ -122,15 +123,14 @@ export const PopupForm=()=> {
                                                 Cancel
                                             </button>
                                             </div>
-                                        </form>  
+                                        </form> 
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </>
-            ) : null}
-           
+            ) : null}   
         </>
     );
 }
