@@ -6,3 +6,4 @@ export interface IUser extends Document {
     password: string,
     // role: "admin" | "user";
 };
+
