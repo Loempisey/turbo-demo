@@ -80,4 +80,8 @@ const deleteTodo = async (req: Request, res: Response): Promise<void> => {
     }
 }
 
-export { getTodos, addTodo, updateTodo, deleteTodo }
+export { 
+    getTodos, 
+    addTodo, 
+    updateTodo,
+    deleteTodo }

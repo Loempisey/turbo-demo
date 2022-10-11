@@ -6,6 +6,7 @@ import http from 'http';
 import cors from "cors";
 import todoRoutes from './routes/todo.routes'
 import userRoutes from './routes/user.routes'
+import meetingRoutes from './routes/meeting.routes'
 
 const app: Express = express()
 const server = http.createServer(app);
@@ -39,8 +40,9 @@ app.use((req, res, next) => {
 app.use(cors())
 app.use(todoRoutes)
 app.use(userRoutes)
+app.use(meetingRoutes)
 
-const uri: string = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0.pmwhfft.mongodb.net/?retryWrites=true&w=majority`
+const uri: string = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0.pmwhfft.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority`
 mongoose
 .connect(uri)
 
