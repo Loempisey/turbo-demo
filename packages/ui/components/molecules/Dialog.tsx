@@ -41,6 +41,21 @@ export const PopupForm=()=> {
 
     ];
     const onSubmit = (data: TextField): void =>{
+        fetch('http://localhost:9000/api/v1/booking', {
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8'
+            },
+        })
+        .then((response) => response.json())
+        .then((data)=>{
+            console.log(data)
+        })
+        // router.push('/Meeting')
+        .catch((error)=> {
+            console.log("error", error)
+        })
         setOpen(false);
         console.log(data)
     }
