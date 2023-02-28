@@ -11,7 +11,6 @@
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
-    
   },
   "devDependencies": {
     "eslint-config-custom": "*",
@@ -24,4 +23,3 @@
   "dependencies": {},
   "packageManager": "yarn@1.22.18"
 }
-
